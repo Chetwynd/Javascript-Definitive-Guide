@@ -63,3 +63,53 @@ b[0] = 1;
 console.log(a[0]);
 
 console.log( a === b); // will be true since they reference the same object
+
+// to copy an array we either iterate and copy over each element or use the slice() or Array.fron() methods
+
+let c = [1,3,4,9];
+
+let d = [];
+
+// for(let index = 0; index < c.length; index++)
+// {
+//   d[index] = c[index];
+// }
+
+// Can also use the slice() method
+
+// d = c.slice();
+
+// Also can use the Array.fron() method
+
+d = Array.from(c);
+
+console.log(c);
+console.log(d);
+
+// To compare 2 distinct objects or arrays, we must compare their properties or elements,
+
+let v = [1, 2 , 3, 4, 5];
+
+let w = [];
+
+w = Array.from(v);
+
+// console.log(w);
+
+if(w === v)
+{
+  console.log('true');
+}
+if(w.length !== v.length)
+{
+  console.log('false');
+}
+for(let index = 0; index < w.length; index++)
+{
+  if(w[index] !== v[index])
+  {
+    return false;
+  }
+}
+return true;
+
