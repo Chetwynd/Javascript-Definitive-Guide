@@ -39,3 +39,27 @@ has made! We will rejoice and be\
 glad in him!";
 
 console.log(multiLineString);
+
+// the global objects when the javascript interpreter starts includes
+// global constants like: undefined, Infinity and NaN
+// global functions like isNaN(), parseInt()
+// isNaN() and parseInt()
+
+// Page 43
+
+let s = 'hello';
+
+console.log(s.toUpperCase());
+s;
+
+// page 44
+
+let a = []; // a refers to an empty array
+
+let b = a; // now b also references the same array
+
+b[0] = 1;
+
+console.log(a[0]);
+
+console.log( a === b); // will be true since they reference the same object
