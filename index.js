@@ -96,20 +96,65 @@ w = Array.from(v);
 
 // console.log(w);
 
-if(w === v)
-{
-  console.log('true');
-}
-if(w.length !== v.length)
-{
-  console.log('false');
-}
-for(let index = 0; index < w.length; index++)
-{
-  if(w[index] !== v[index])
-  {
-    return false;
-  }
-}
-return true;
+// if(w === v)
+// {
+//   console.log('true');
+// }
+// if(w.length !== v.length)
+// {
+//   console.log('false');
+// }
+// for(let index = 0; index < w.length; index++)
+// {
+//   if(w[index] !== v[index])
+//   {
+//     return false;
+//   }
+// }
+// return true;
+
+// Explicit conversion in Javascript
+
+var ab = Number('3');
+
+var str = String(false);
+
+var truth = Boolean([]);
+
+console.log(ab + ' ' + str + ' ' + truth);
+
+// Precision conversion
+
+let n = 123456.789;
+// conversion with a fixed number of places 
+console.log(n.toFixed(0));
+
+console.log(n.toFixed(2));
+
+console.log(n.toFixed(3));
+
+console.log(n.toFixed(5));
+
+// conversion with a fixed number of places to strings
+
+console.log(n.toPrecision(10));
+
+// converting literals to strings
+// 3 blind mice
+console.log(parseInt('3 blind mice'));
+
+// 3.14 meters 
+console.log(parseFloat('3.14 meters'));
+
+// "-12.34"
+console.log(parseFloat(-12.34));
+
+// "0.1"
+console.log(parseInt('0.1'));
+
+// ".1" - Integers cant start with a '.'
+console.log(parseInt('.1'));
+
+// $72.47 - numbers cant start with a $
+console.log(parseFloat('$72.47'));
 
